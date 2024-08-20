@@ -1,0 +1,10 @@
+* {
+  font-family: monospace;
+  color: #ff707f;
+  background: #461e25;
+}
+
+#temp {
+  font-weight: bolder;
+  font-size: 200%;
+}
