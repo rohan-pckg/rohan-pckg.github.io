@@ -3,14 +3,11 @@
   --blue: #5c99f8;
   --dark: #1e1e1e;
   --white: #ffffff;
-  font-family: Inter, sans-serif;
 }
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
-}
+
 * {
+  font-family: monospace;
+  font-size: 110%;
   color: var(--white);
   background: var(--dark);
   box-sizing: border-box;
@@ -71,7 +68,8 @@ header {
 .introduction h1,
 .interests h1,
 .disclaimer h1 {
-  font-weight: 200;
+  font-weight: lighter;
+  font-size: 2rem;
   color: var(--blue);
 }
 
