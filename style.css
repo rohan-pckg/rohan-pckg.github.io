@@ -13,6 +13,12 @@
   box-sizing: border-box;
 }
 
+main {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 nav img {
   width: 50px;
 }
@@ -25,10 +31,10 @@ a {
   color: var(--blue);
 }
 nav {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 li {
