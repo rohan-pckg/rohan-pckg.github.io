@@ -3,13 +3,21 @@
   --blue: #5c99f8;
   --dark: #000000;
   --white: #ffffff;
+  --dim-pink: #461e25;
+  --pink: #ff707f;
+  --dim-orange: #321d13;
+  --orange: #cc6227;
+  --dim-purple: #332946;
+  --purple: #ae8aff;
+  --dim-yellow: #322f16;
+  --yellow: #afa100;
 }
 
 * {
   font-family: monospace;
   font-size: 110%;
   color: var(--white);
-  background: var(--dark);
+  background: var(--dim-blue);
   box-sizing: border-box;
 }
 
@@ -52,6 +60,7 @@ nav a:hover,
 nav a:active {
   background: var(--dim-blue);
   color: var(--blue);
+  border-bottom: 1px solid var(--blue);
 }
 
 hr {
