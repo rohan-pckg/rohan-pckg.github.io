@@ -21,7 +21,7 @@ body{
   margin-left : 10vw;
 }
 
-.intro , .about , .work{
+.intro , .about , .work , .projects{
   display: grid;
   grid-gap: 1rem;
   margin-bottom : 10vh;
