@@ -1,38 +1,50 @@
-:root{
-  --bg-color : #111110;
-  --white : #EEEEEC;
-  --gray : #B5B3AD;
+:root {
+    --bg-color: #111110;
+    --white: #eeeeec;
+    --gray: #b5b3ad;
     font-family: "Inter", serif;
     font-weight: 400;
-    font-size : 16px;
+    font-size: 16px;
 }
 
-*{
-  margin : 0;
-  padding : 0;
-  background-color: var(--bg-color);
-  color : var(--white);
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--white);
 }
 
-body{
-  display: flex;
-  justify-content: flex-start;
-  margin-top : 10vh;
-  margin-left : 10vw;
+body {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    margin-left: 10vw;
 }
 
-.intro , .about , .work , .projects{
-  display: grid;
-  grid-gap: 1rem;
-  margin-bottom : 10vh;
+.container {
+    margin: 0.5rem;
+    max-width: 80vw;
 }
 
-.title{
-  font-weight: 500;
-  display: block;
+.intro,
+.about,
+.work,
+.projects {
+    display: grid;
+    grid-gap: 0.5rem;
+    margin-bottom: 10vh;
 }
 
-.caption{
-  font-weight : 400;
-  color : var(--gray)
+.title {
+    font-weight: 500;
+    display: block;
+}
+
+.caption {
+    font-weight: 400;
+    color: var(--gray);
+}
+
+img {
+    width: 50vw;
 }
