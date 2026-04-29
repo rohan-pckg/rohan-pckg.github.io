@@ -23,7 +23,7 @@ body {
 
 .container {
     margin: 0.5rem;
-    max-width: 80vw;
+    max-width: 50vw;
 }
 
 .intro,
@@ -47,4 +47,15 @@ body {
 
 img {
     width: 50vw;
+}
+
+/* Standard syntax */
+@media screen and (max-width: 600px) {
+    img {
+        width: 80vw;
+    }
+
+    .container {
+        max-width: 80vw;
+    }
 }
