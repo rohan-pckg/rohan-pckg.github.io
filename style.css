@@ -1,61 +1,132 @@
 :root {
-    --bg-color: #111110;
-    --white: #eeeeec;
-    --gray: #b5b3ad;
-    font-family: "Inter", serif;
-    font-weight: 400;
-    font-size: 16px;
+  --bg-color: #111110;
+  --white: #eeeeec;
+  --gray: #b5b3ad;
+  --accent: #ff8700;
+
+  font-family: "Inter", serif;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg-color);
-    color: var(--white);
+@font-face {
+  font-family: "Ioskeley Mono";
+  src: url("./fonts/IoskeleyMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  font-family: "Ioskeley Mono", monospace;
+  font-size: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 10vh;
-    margin-left: 10vw;
+  background-color: var(--bg-color);
+  color: var(--white);
+
+  display: flex;
+  justify-content: flex-start;
+
+  margin-top: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 .container {
-    margin: 0.5rem;
-    max-width: 50vw;
+  width: 100%;
+  max-width: min(50vw, 720px);
+  margin: 0.5rem;
 }
 
-.intro,
-.about,
-.work,
-.projects {
-    display: grid;
-    grid-gap: 0.5rem;
-    margin-bottom: 10vh;
+.section {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 10vh;
 }
 
 .title {
-    font-weight: 500;
-    display: block;
+  padding-bottom: 4px;
 }
 
-.caption {
-    font-weight: 400;
-    color: var(--gray);
+.body-text {
+  color: var(--gray);
+}
+
+.navigation-link {
+}
+
+.link {
+  text-decoration-color: var(--accent);
+  color: var(--accent);
 }
 
 img {
-    width: 50vw;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Standard syntax */
-@media screen and (max-width: 600px) {
-    img {
-        width: 80vw;
-    }
+a {
+  text-color: var(--accent);
+}
 
-    .container {
-        max-width: 80vw;
-    }
+/* Tablets */
+@media screen and (max-width: 900px) {
+  body {
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+
+  .container {
+    max-width: 70vw;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  body {
+    margin-top: 8vh;
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .intro,
+  .about,
+  .work,
+  .projects {
+    margin-bottom: 8vh;
+  }
+}
+
+/* Small phones */
+@media screen and (max-width: 400px) {
+  body {
+    margin-top: 6vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+  }
+
+  .intro,
+  .about,
+  .work,
+  .projects {
+    margin-bottom: 7vh;
+  }
 }
