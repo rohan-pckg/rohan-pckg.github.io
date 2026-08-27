@@ -2,7 +2,8 @@
   --bg-color: #111110;
   --white: #eeeeec;
   --gray: #b5b3ad;
-  --accent: #ff8700;
+  --orange: #ff8700;
+  --green: #00bd00;
 
   font-family: "Inter", serif;
   font-weight: 400;
@@ -64,11 +65,11 @@ body {
 }
 
 .navigation-link {
+  color: var(--green);
 }
 
 .link {
-  text-decoration-color: var(--accent);
-  color: var(--accent);
+  color: var(--green);
 }
 
 img {
