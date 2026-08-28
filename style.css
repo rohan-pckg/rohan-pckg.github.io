@@ -4,9 +4,9 @@
   --gray: #b5b3ad;
   --accent: #ff8700;
 
-  font-family: "Inter", serif;
+  font-family: "Ioskeley Mono", monospace;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 @font-face {
@@ -21,6 +21,7 @@ html,
 body {
   font-family: "Ioskeley Mono", monospace;
   font-size: 14px;
+  line-height: 1.65;
 }
 
 *,
@@ -56,6 +57,9 @@ body {
 }
 
 .title {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
   padding-bottom: 4px;
 }
 
@@ -63,8 +67,20 @@ body {
   color: var(--gray);
 }
 
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .navigation-link {
   color: var(--accent);
+  display: inline-block;
 }
 
 .link {
@@ -78,8 +94,88 @@ img {
   height: auto;
 }
 
-a {
-  text-color: var(--accent);
+.two-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.date {
+  color: var(--gray);
+  text-decoration: none !important;
+}
+
+/* Writing / archive entries */
+.entry {
+  display: grid;
+  gap: 0.25rem;
+  margin-bottom: 6vh;
+}
+
+.entry-title {
+  color: var(--accent);
+}
+
+.entry-title:hover,
+.entry-title:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.entry-desc {
+  color: var(--gray);
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  gap: 8vh;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery figcaption {
+  color: var(--gray);
+  margin-top: 0.75rem;
+}
+
+/* Project / experiment list */
+.list-item {
+  display: grid;
+  gap: 0.25rem;
+  margin-bottom: 6vh;
+}
+
+.list-title {
+  color: var(--accent);
+}
+
+.list-title:hover,
+.list-title:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.list-meta {
+  color: var(--gray);
+}
+
+/* Shared navigation */
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.site-footer {
+  margin-top: 4vh;
+  margin-bottom: 6vh;
+}
+
+.site-footer .nav {
+  gap: 0.35rem;
 }
 
 /* Tablets */
@@ -107,11 +203,17 @@ a {
     margin: 0;
   }
 
-  .intro,
-  .about,
-  .work,
-  .projects {
+  .section {
     margin-bottom: 8vh;
+  }
+
+  .entry,
+  .list-item {
+    margin-bottom: 5vh;
+  }
+
+  .gallery {
+    gap: 6vh;
   }
 }
 
@@ -123,10 +225,7 @@ a {
     margin-right: 6vw;
   }
 
-  .intro,
-  .about,
-  .work,
-  .projects {
+  .section {
     margin-bottom: 7vh;
   }
 }
