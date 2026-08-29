@@ -60,7 +60,6 @@ body {
   color: var(--white);
   font-weight: 400;
   font-size: 14px;
-  padding-bottom: 4px;
 }
 
 .body-text {
@@ -126,6 +125,37 @@ img {
   color: var(--gray);
 }
 
+/* Design preview */
+.preview {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  margin-top: 0.75rem;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .preview {
+    position: fixed;
+    right: 6vw;
+    bottom: 6vh;
+    width: 220px;
+    max-width: 40vw;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 5;
+  }
+
+  .entry:hover .preview,
+  .entry:focus-within .preview {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 /* Gallery */
 .gallery {
   display: grid;
@@ -160,6 +190,118 @@ img {
 
 .list-meta {
   color: var(--gray);
+}
+
+/* Article layout */
+.article-title {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.article-meta {
+  color: var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: baseline;
+}
+
+.article-content {
+  margin-top: 1rem;
+}
+
+.article-content p {
+  color: var(--gray);
+  margin: 0.6rem 0;
+}
+
+.article-content h2,
+.article-content h3 {
+  color: var(--white);
+  font-weight: 400;
+  margin-top: 2rem;
+  padding-bottom: 4px;
+}
+
+.article-content h2 {
+  font-size: 14px;
+}
+
+.article-content h3 {
+  font-size: 14px;
+}
+
+.article-content ul,
+.article-content ol {
+  color: var(--gray);
+  padding-left: 1.4rem;
+  margin: 0.6rem 0;
+}
+
+.article-content li {
+  color: var(--gray);
+  margin: 0.25rem 0;
+}
+
+.article-content blockquote {
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--gray);
+}
+
+.article-content blockquote blockquote {
+  margin: 0.75rem 0;
+}
+
+.article-content code {
+  color: var(--accent);
+  font-family: "Ioskeley Mono", monospace;
+}
+
+.article-content pre {
+  background: #1a1a18;
+  border: 1px solid #2a2a28;
+  padding: 1rem;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.article-content pre code {
+  color: var(--gray);
+}
+
+.article-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+  font-size: 12px;
+}
+
+.article-content th,
+.article-content td {
+  border: 1px solid #2a2a28;
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  color: var(--gray);
+}
+
+.article-content th {
+  color: var(--white);
+}
+
+.article-content figure {
+  margin: 1.5rem 0;
+}
+
+.article-content figcaption {
+  color: var(--gray);
+  margin-top: 0.6rem;
+}
+
+.article-content .afterthought a {
+  color: var(--accent);
 }
 
 /* Shared navigation */
